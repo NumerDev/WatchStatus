@@ -1,0 +1,35 @@
+<!-- <app-add-position
+  (toggle)="toggleView($event)"
+  *ngIf="visible"
+></app-add-position> -->
+
+<main class="panel">
+  <section class="grid-wrapper">
+    <div class="grid">
+      <app-card routerLink="positionInfo"></app-card>
+    </div>
+  </section>
+  <aside class="side-menu">
+    <button class="add-position">+</button>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Wyszukaj</mat-label>
+      <input matInput />
+    </mat-form-field>
+
+    <div class="position-type">
+      <!-- <app-checkbox color="#B4DF80" name="Film"></app-checkbox>
+      <app-checkbox color="#B4DF80" name="Serial"></app-checkbox> -->
+    </div>
+
+    <div class="position-genre">
+      <span>Filtry</span>
+      <!-- <app-checkbox color="#EB5463" name="Akcja"></app-checkbox>
+      <app-checkbox color="#4FC0E8" name="Sci-Fi"></app-checkbox>
+      <app-checkbox color="#EB86BE" name="Romans"></app-checkbox>
+      <app-checkbox color="#AC92EA" name="Horror"></app-checkbox>
+      <app-checkbox color="#FDCD56" name="Dramat"></app-checkbox>
+      <app-checkbox color="#9ED26A" name="Przygoda"></app-checkbox> -->
+    </div>
+  </aside>
+</main>
