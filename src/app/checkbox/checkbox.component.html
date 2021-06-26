@@ -1,0 +1,9 @@
+<div class="checkbox">
+  <label
+    class="checkbox-label"
+    for="{{ name }}"
+    [style.background-color]="test['checked'] ? color : '#c4c4c4'"
+    (click)="(!temp)"
+    >{{ name }} <input id="{{ name }}" type="checkbox" #test
+  /></label>
+</div>

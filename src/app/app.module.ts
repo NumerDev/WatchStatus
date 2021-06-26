@@ -8,9 +8,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PanelComponent } from './panel/panel.component';
+import { CheckboxComponent } from './checkbox/checkbox.component';
 
 @NgModule({
-  declarations: [AppComponent, PanelComponent],
+  declarations: [AppComponent, PanelComponent, CheckboxComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

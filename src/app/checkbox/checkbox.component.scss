@@ -1,0 +1,24 @@
+.checkbox {
+  border-radius: 50px;
+  color: white;
+  font-size: 14px;
+  position: relative;
+
+  .checkbox-label {
+    width: 100%;
+    height: 100%;
+    width: 90px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    user-select: none;
+    transition: background-color 0.1s ease;
+    cursor: pointer;
+
+    input {
+      display: none;
+    }
+  }
+}
