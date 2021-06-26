@@ -3,13 +3,19 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-panel',
   templateUrl: './panel.component.html',
-  styleUrls: ['./panel.component.scss']
+  styleUrls: ['./panel.component.scss'],
 })
-export class PanelComponent implements OnInit {
+export class PanelComponent {
+  constructor() {}
 
-  constructor() { }
+  visible: boolean = false;
 
-  ngOnInit(): void {
+  toggleView(e: Boolean) {
+    this.visible == e ? (this.visible = false) : (this.visible = true);
+    // console.log(this.visible);
   }
 
+  toggleModal() {
+    this.visible = this.visible ? false : true;
+  }
 }

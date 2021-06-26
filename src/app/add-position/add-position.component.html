@@ -1,0 +1,174 @@
+<div class="blur">
+  <div class="modal">
+    <button class="close-modal" (click)="toggleVisible(true)" routerLink="">
+      <img src="../../assets/close-icon.svg" alt="" />
+    </button>
+
+    <header class="modal-title">
+      <h2>Nowa Pozycja</h2>
+    </header>
+
+    <form [formGroup]="fullForm" (ngSubmit)="submit()">
+      <mat-form-field class="position-title-input">
+        <mat-label>Tytuł</mat-label>
+        <input matInput formControlName="title" />
+      </mat-form-field>
+
+      <div class="position-type">
+        <div class="checkbox">
+          <label
+            class="checkbox-label"
+            for="type_1"
+            [style.background-color]="film['checked'] ? '#B4DF80' : '#c4c4c4'"
+            >Film<input
+              value="film"
+              formControlName="type"
+              id="type_1"
+              type="radio"
+              #film
+          /></label>
+        </div>
+
+        <div class="checkbox">
+          <label
+            class="checkbox-label"
+            for="type_2"
+            [style.background-color]="serial['checked'] ? '#B4DF80' : '#c4c4c4'"
+            >Serial<input
+              value="serial"
+              formControlName="type"
+              id="type_2"
+              type="radio"
+              #serial
+          /></label>
+        </div>
+      </div>
+
+      <div class="position-genre" formGroupName="genre">
+        <div class="checkbox">
+          <label
+            class="checkbox-label"
+            for="genre_1"
+            [style.background-color]="g1['checked'] ? '#EB5463' : '#c4c4c4'"
+            >Akcja<input
+              formControlName="action"
+              id="genre_1"
+              type="checkbox"
+              #g1
+          /></label>
+        </div>
+
+        <div class="checkbox">
+          <label
+            class="checkbox-label"
+            for="genre_2"
+            [style.background-color]="g2['checked'] ? '#4FC0E8' : '#c4c4c4'"
+            >Sci-Fi<input
+              formControlName="scifi"
+              id="genre_2"
+              type="checkbox"
+              #g2
+          /></label>
+        </div>
+
+        <div class="checkbox">
+          <label
+            class="checkbox-label"
+            for="genre_3"
+            [style.background-color]="g3['checked'] ? '#EB86BE' : '#c4c4c4'"
+            >Romans<input
+              formControlName="romanse"
+              id="genre_3"
+              type="checkbox"
+              #g3
+          /></label>
+        </div>
+
+        <div class="checkbox">
+          <label
+            class="checkbox-label"
+            for="genre_4"
+            [style.background-color]="g4['checked'] ? '#AC92EA' : '#c4c4c4'"
+            >Horror<input
+              formControlName="horror"
+              id="genre_4"
+              type="checkbox"
+              #g4
+          /></label>
+        </div>
+
+        <div class="checkbox">
+          <label
+            class="checkbox-label"
+            for="genre_5"
+            [style.background-color]="g5['checked'] ? '#FDCD56' : '#c4c4c4'"
+            >Dramat<input
+              formControlName="drama"
+              id="genre_5"
+              type="checkbox"
+              #g5
+          /></label>
+        </div>
+
+        <div class="checkbox">
+          <label
+            class="checkbox-label"
+            for="genre_6"
+            [style.background-color]="g6['checked'] ? '#9ED26A' : '#c4c4c4'"
+            >Przygoda<input
+              formControlName="adventure"
+              id="genre_6"
+              type="checkbox"
+              #g6
+          /></label>
+        </div>
+      </div>
+
+      <div class="position-status">
+        <div class="season">
+          <span>Sezon</span>
+          <input
+            #season
+            min="1"
+            value="3"
+            type="number"
+            class="season-value"
+            contenteditable
+            formControlName="season"
+          />
+
+          <div class="season-buttons">
+            <button type="button" (click)="sInc(season)">+</button>
+            <button type="button" (click)="sDec(season)">-</button>
+          </div>
+        </div>
+        <div class="episode">
+          <span>Odcinek</span>
+          <input
+            #episode
+            min="1"
+            type="number"
+            class="episode-value"
+            contenteditable
+            formControlName="episode"
+          />
+          <div class="episode-buttons">
+            <button type="button" (click)="eInc(episode)">+</button>
+            <button type="button" (click)="eDec(episode)">-</button>
+          </div>
+        </div>
+      </div>
+
+      <button
+        [disabled]="!fullForm.valid"
+        type="submit"
+        class="add-position"
+        routerLink=""
+      >
+        Dodaj
+      </button>
+    </form>
+    <!-- <h3>{{ fullForm.value | json }}</h3> -->
+    <!-- <h3>{{ fullForm.status | json }}</h3> -->
+  </div>
+</div>

@@ -1,0 +1,163 @@
+.blur {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  top: 0;
+  left: 0;
+
+  .modal {
+    height: 600px;
+    width: 500px;
+    background-color: white;
+    border-radius: 15px;
+    position: relative;
+
+    .close-modal {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      right: 30px;
+      top: 30px;
+      border-radius: 50%;
+      background: linear-gradient(to right, #f76c82, #d94452);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .modal-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #3aadd9;
+      padding: 30px 0;
+    }
+
+    .position-title-input {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .add-title {
+        border: none;
+        border-bottom: 1px solid #c4c4c4;
+        padding: 5px;
+        width: 270px;
+
+        &:focus {
+          outline: none;
+          border-bottom: 1px solid black;
+        }
+      }
+    }
+
+    .position-type {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      padding: 50px 0;
+    }
+
+    .position-genre {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .position-status {
+      padding: 50px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+
+      .season,
+      .episode {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .season-value,
+      .episode-value {
+        text-align: center;
+        width: 30px;
+        -webkit-appearance: none;
+        -moz-appearance: textfield;
+        border: none;
+        border-bottom: 2px solid black;
+      }
+
+      .season-buttons,
+      .episode-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 20px;
+          height: 20px;
+          background-color: #89c053;
+          border-radius: 50%;
+          font-size: 18px;
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .add-position {
+      width: 150px;
+      height: 40px;
+      background: linear-gradient(to right, #b4df80, #89c053);
+      border-radius: 50px;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      background-color: red;
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      cursor: pointer;
+    }
+  }
+}
+
+//temp
+.checkbox {
+  border-radius: 50px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+
+  .checkbox-label {
+    width: 100%;
+    height: 100%;
+    width: 90px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    user-select: none;
+    transition: background-color 0.1s ease;
+    cursor: pointer;
+
+    input {
+      display: none;
+    }
+  }
+}

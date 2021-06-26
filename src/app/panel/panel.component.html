@@ -1,7 +1,7 @@
-<!-- <app-add-position
+<app-add-position
   (toggle)="toggleView($event)"
   *ngIf="visible"
-></app-add-position> -->
+></app-add-position>
 
 <main class="panel">
   <section class="grid-wrapper">
@@ -10,7 +10,13 @@
     </div>
   </section>
   <aside class="side-menu">
-    <button class="add-position">+</button>
+    <button
+      class="add-position"
+      (click)="toggleModal()"
+      routerLink="addPosition"
+    >
+      +
+    </button>
 
     <mat-form-field class="example-full-width">
       <mat-label>Wyszukaj</mat-label>

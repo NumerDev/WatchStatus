@@ -9,9 +9,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PanelComponent } from './panel/panel.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
+import { AddPositionComponent } from './add-position/add-position.component';
 
 @NgModule({
-  declarations: [AppComponent, PanelComponent, CheckboxComponent],
+  declarations: [AppComponent, PanelComponent, CheckboxComponent, AddPositionComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
