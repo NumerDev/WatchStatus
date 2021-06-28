@@ -1,7 +1,7 @@
-import { PanelComponent } from './panel/panel.component';
+import { PanelComponent } from './components/panel/panel.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AddPositionComponent } from './add-position/add-position.component';
+import { AddPositionComponent } from './components/add-position/add-position.component';
 
 const routes: Routes = [
   { path: '', component: PanelComponent },

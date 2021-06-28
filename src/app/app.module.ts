@@ -7,12 +7,17 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PanelComponent } from './panel/panel.component';
-import { CheckboxComponent } from './checkbox/checkbox.component';
-import { AddPositionComponent } from './add-position/add-position.component';
+import { PanelComponent } from './components/panel/panel.component';
+import { CheckboxComponent } from './components/checkbox/checkbox.component';
+import { AddPositionComponent } from './components/add-position/add-position.component';
 
 @NgModule({
-  declarations: [AppComponent, PanelComponent, CheckboxComponent, AddPositionComponent],
+  declarations: [
+    AppComponent,
+    PanelComponent,
+    CheckboxComponent,
+    AddPositionComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

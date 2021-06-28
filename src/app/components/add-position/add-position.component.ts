@@ -12,8 +12,6 @@ export class AddPositionComponent {
 
   constructor(private fb: FormBuilder) {}
 
-  // temp: boolean = false;
-
   toggleVisible(e: boolean) {
     this.toggle.emit(e);
   }
