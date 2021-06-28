@@ -1,0 +1,78 @@
+.blur {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  top: 0;
+  left: 0;
+
+  .modal {
+    height: 600px;
+    width: 500px;
+    background-color: white;
+    border-radius: 15px;
+    position: relative;
+
+    .title {
+      height: 25%;
+      width: 100%;
+      background-color: #b4df80; //temp
+      border-radius: 15px 15px 0 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      color: white;
+      text-shadow: 1px 1px 5px rgb(0, 0, 0, 0.5);
+
+      .close-modal {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        right: 30px;
+        top: 30px;
+        border-radius: 50%;
+        background: linear-gradient(to right, #f76c82, #d94452);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+    }
+
+    .buttons {
+      position: absolute;
+      bottom: 0;
+      padding: 30px 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      gap: 60px;
+
+      .update,
+      .delete {
+        width: 150px;
+        height: 40px;
+        border: none;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .update {
+        background: linear-gradient(to right, #66d4f1, #3aadd9);
+      }
+
+      .delete {
+        background: linear-gradient(to right, #f76c82, #d94452);
+      }
+    }
+  }
+}

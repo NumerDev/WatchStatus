@@ -1,7 +1,11 @@
 <main class="panel">
   <section class="grid-wrapper">
     <div class="grid">
-      <div class="card" *ngFor="let list of lists">
+      <div
+        class="card"
+        *ngFor="let list of lists"
+        [routerLink]="['/position', list._id]"
+      >
         <div class="title">
           <h4>{{ list.title }}</h4>
         </div>
