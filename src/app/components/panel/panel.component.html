@@ -1,22 +1,19 @@
-<app-add-position
-  (toggle)="toggleView($event)"
-  *ngIf="visible"
-></app-add-position>
-
 <main class="panel">
   <section class="grid-wrapper">
     <div class="grid">
-      <app-card routerLink="positionInfo"></app-card>
+      <div class="card" *ngFor="let list of lists">
+        <div class="title">
+          <h4>{{ list.title }}</h4>
+        </div>
+        <div class="desc">
+          <span>Season: {{ list.season }}</span>
+          <span>Episode: {{ list.episode }}</span>
+        </div>
+      </div>
     </div>
   </section>
   <aside class="side-menu">
-    <button
-      class="add-position"
-      (click)="toggleModal()"
-      routerLink="addPosition"
-    >
-      +
-    </button>
+    <button class="add-position" routerLink="addPosition">+</button>
 
     <mat-form-field class="example-full-width">
       <mat-label>Wyszukaj</mat-label>

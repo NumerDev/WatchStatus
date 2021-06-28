@@ -1,21 +1,28 @@
+import { PositionsService } from './../../services/Positions/positions.service';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-panel',
   templateUrl: './panel.component.html',
   styleUrls: ['./panel.component.scss'],
 })
-export class PanelComponent {
-  constructor() {}
+export class PanelComponent implements OnInit {
+  constructor(
+    private position: PositionsService,
+    private route: ActivatedRoute
+  ) {}
 
-  visible: boolean = false;
+  lists: any;
 
-  toggleView(e: Boolean) {
-    this.visible == e ? (this.visible = false) : (this.visible = true);
-    // console.log(this.visible);
-  }
+  ngOnInit() {
+    this.route.params.subscribe((params: Params) => {
+      console.log(params);
+    });
 
-  toggleModal() {
-    this.visible = this.visible ? false : true;
+    this.position.getPosition().subscribe((lists: any) => {
+      this.lists = lists;
+      console.log(lists);
+    });
   }
 }
