@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-position',
@@ -10,7 +11,7 @@ import { FormBuilder } from '@angular/forms';
 export class AddPositionComponent {
   @Output() toggle = new EventEmitter<Boolean>();
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private route: Router) {}
 
   toggleVisible(e: boolean) {
     this.toggle.emit(e);
@@ -33,7 +34,8 @@ export class AddPositionComponent {
 
   submit() {
     console.log(this.fullForm.value);
-    this.toggle.emit(true);
+    // this.toggle.emit(true);
+    this.route.navigate(['/']);
   }
 
   sInc(e: any) {
