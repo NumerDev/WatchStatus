@@ -32,4 +32,18 @@ export class PositionsService {
   getPosition() {
     return this.webReqService.get('');
   }
+
+  // updatePosition(season: number, episode: number, id: string) {
+  //   return this.webReqService.patch(id, {
+  //     season: season,
+  //     episode: episode,
+  //   });
+  // }
+
+  deletePosition(id: string) {
+    console.log(`position/${id}`);
+    return this.webReqService.delete(`position/${id}`).subscribe(() => {
+      console.log(`Deleted position ${id}`);
+    });
+  }
 }

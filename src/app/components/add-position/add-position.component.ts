@@ -1,5 +1,5 @@
 import { PositionsService } from './../../services/Positions/positions.service';
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -13,7 +13,7 @@ export class AddPositionComponent {
   constructor(
     private fb: FormBuilder,
     private route: Router,
-    private pst: PositionsService
+    private position: PositionsService
   ) {}
 
   fullForm = this.fb.group({
@@ -32,7 +32,7 @@ export class AddPositionComponent {
   });
 
   submit() {
-    this.pst.createPosition(this.fullForm.value);
+    this.position.createPosition(this.fullForm.value);
     return this.route.navigate(['/']);
   }
 
