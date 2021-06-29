@@ -33,12 +33,26 @@ export class PositionsService {
     return this.webReqService.get('');
   }
 
-  // updatePosition(season: number, episode: number, id: string) {
-  //   return this.webReqService.patch(id, {
-  //     season: season,
-  //     episode: episode,
-  //   });
-  // }
+  updatePosition(obj: any, id: string) {
+    return this.webReqService
+      .patch(`position/${id}`, {
+        title: obj.title,
+        type: obj.type,
+        genre: {
+          action: obj.genre.action,
+          scifi: obj.genre.scifi,
+          romanse: obj.genre.romanse,
+          horror: obj.genre.horror,
+          drama: obj.genre.drama,
+          adventure: obj.genre.adventure,
+        },
+        season: obj.season,
+        episode: obj.episode,
+      })
+      .subscribe((res) => {
+        console.log(`Updated position ${id}`);
+      });
+  }
 
   deletePosition(id: string) {
     console.log(`position/${id}`);
