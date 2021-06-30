@@ -16,9 +16,9 @@ Project na zaliczenie przedmiotu `Języki programowania - Studium przypadku`
 
 ## Funkcje
 
-C - Dodawanie pozycji guzikiem `+`
-R - Wyświetlanie pozycji z bazy danych na głównej stronie
-U - Aktualizacja informacji pozycji po kliknięciu w kartę pozycji
-D - Usunięcie elementu w informacjach pozycji
+- C - Dodawanie pozycji guzikiem `+`
+- R - Wyświetlanie pozycji z bazy danych na głównej stronie
+- U - Aktualizacja informacji pozycji po kliknięciu w kartę pozycji
+- D - Usunięcie elementu w informacjach pozycji
 
 `Filtry oraz wyszukiwarka pozycji są funkcjami pobocznymi które będą rozwiniete w przyszłości i nie są głównymi funkcjonalnościami projektu na zaliczenie!`
