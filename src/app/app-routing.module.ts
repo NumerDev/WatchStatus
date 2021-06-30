@@ -1,4 +1,4 @@
-import { PositionComponent } from './position/position.component';
+import { PositionComponent } from './components/position/position.component';
 import { PanelComponent } from './components/panel/panel.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';

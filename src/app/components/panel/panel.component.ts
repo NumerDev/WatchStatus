@@ -1,6 +1,6 @@
-import { PositionsService } from './../../services/Positions/positions.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+import { PositionsService } from '../../services/Positions/positions.service';
 
 @Component({
   selector: 'app-panel',
@@ -16,13 +16,10 @@ export class PanelComponent implements OnInit {
   lists: any;
 
   ngOnInit() {
-    this.route.params.subscribe((params: Params) => {
-      console.log(params);
-    });
+    this.route.params.subscribe((params: Params) => {});
 
     this.position.getPosition().subscribe((lists: any) => {
       this.lists = lists;
-      console.log(lists);
     });
   }
 }

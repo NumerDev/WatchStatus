@@ -23,13 +23,13 @@ export class PositionsService {
         season: obj.season,
         episode: obj.episode,
       })
-      .subscribe((res: any) => {
+      .subscribe(() => {
         console.log('Position added');
-        console.log(res);
       });
   }
 
   getPosition() {
+    console.log('Loaded positions');
     return this.webReqService.get('');
   }
 
@@ -55,7 +55,6 @@ export class PositionsService {
   }
 
   deletePosition(id: string) {
-    console.log(`position/${id}`);
     return this.webReqService.delete(`position/${id}`).subscribe(() => {
       console.log(`Deleted position ${id}`);
     });

@@ -11,7 +11,7 @@ import { AppComponent } from './app.component';
 import { PanelComponent } from './components/panel/panel.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { AddPositionComponent } from './components/add-position/add-position.component';
-import { PositionComponent } from './position/position.component';
+import { PositionComponent } from './components/position/position.component';
 
 @NgModule({
   declarations: [

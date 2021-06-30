@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Router } from '@angular/router';
-import { PositionsService } from '../services/Positions/positions.service';
+import { PositionsService } from '../../services/Positions/positions.service';
 
 @Component({
   selector: 'app-position',
@@ -73,7 +73,6 @@ export class PositionComponent implements OnInit {
 
   delete() {
     this.position.deletePosition(this.positionID);
-
     return this.router.navigate(['/']);
   }
 }
