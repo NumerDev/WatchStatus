@@ -1,27 +1,24 @@
 # WatchStatus
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.0.
+Project na zaliczenie przedmiotu `Języki programowania - Studium przypadku`
 
-## Development server
+## Stack
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular
+- Express
+- MongoDB
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Należy pobrać MongoDB ze strony `https://www.mongodb.com/try/download/community`
+2. W folderze `/WatchStatus` oraz folderze `/api` należy uruchomić `npm install`
+3. Uruchomić `npm run-script run` w folderze `/WatchStatus`
 
-## Running unit tests
+## Funkcje
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+C - Dodawanie pozycji guzikiem `+`
+R - Wyświetlanie pozycji z bazy danych na głównej stronie
+U - Aktualizacja informacji pozycji po kliknięciu w kartę pozycji
+D - Usunięcie elementu w informacjach pozycji
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+`Filtry oraz wyszukiwarka pozycji są funkcjami pobocznymi które będą rozwiniete w przyszłości i nie są głównymi funkcjonalnościami projektu na zaliczenie!`
